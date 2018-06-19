@@ -1,5 +1,5 @@
 /*
- ** stream_socket_server.c -- small server which just sends Hello, world. you can test it with telnet or netcat
+** stream_socket_server.c -- small server which just sends Hello, world. you can test it with telnet or netcat
  */
 
 #include <stdio.h>
@@ -15,7 +15,6 @@
 #include <sys/wait.h>
 #include <signal.h>
 
-#define PORT 	"3490" // PORT number
 #define BACKLOG 10     // how many pending connections
 
 void sigchld_handler(int s) {
@@ -34,7 +33,7 @@ void *get_in_addr(struct sockaddr *sa) {
     return &(((struct sockaddr_in6 *) sa)->sin6_addr);
 }
 
-int main(void) {
+int main(int argc, char *argv[]) {
     int listen_socket_fd, new_conn_fd;
     struct addrinfo hints, *servinfo, *it;
     struct sockaddr_storage connector_addr_info;
@@ -44,12 +43,17 @@ int main(void) {
     char s[INET6_ADDRSTRLEN];
     int err;
 
+    if (argc == 1) {
+        fprintf(stderr, "no port given\n");
+        exit(1);
+    }
+
     memset(&hints, 0, sizeof(hints));
     hints.ai_family   = AF_UNSPEC;     // IPv4 or IPv6, does not matter
     hints.ai_socktype = SOCK_STREAM;   // Socket streams (TCP)
     hints.ai_flags    = AI_PASSIVE;    // Use own IP
 
-    if ((err = getaddrinfo(NULL, PORT, &hints, &servinfo)) != 0) {
+    if ((err = getaddrinfo(NULL, argv[1], &hints, &servinfo)) != 0) {
         fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(err));
         return 1;
     }
