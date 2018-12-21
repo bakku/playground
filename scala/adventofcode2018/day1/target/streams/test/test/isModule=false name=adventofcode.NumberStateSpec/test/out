@@ -1,0 +1,7 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mNumberStateSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m#value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the stored value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m#add[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return a new NumberState with added value[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m#sub[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return a new NumberState with substracted value[0m[0m
