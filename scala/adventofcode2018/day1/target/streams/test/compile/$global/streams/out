@@ -1,4 +1,0 @@
-[0m[[0m[33mwarn[0m] [0m[0m/Users/christian/Development/bakku/playground/scala/adventofcode2018/day1/src/test/scala/adventofcode/SequenceCalculatorSpec.scala:8:13: comparing values of types adventofcode.NumberState and Int using `==' will always yield false[0m
-[0m[[0m[33mwarn[0m] [0m[0m      assert(SequenceCalculator.run(Seq(1, -1, 5, -6)) == -1)[0m
-[0m[[0m[33mwarn[0m] [0m[0m            ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
