@@ -1,0 +1,37 @@
+[
+    {
+        "index": 1,
+        "weight": 75,
+        "value": 34
+    },
+    {
+        "index": 2,
+        "weight": 34,
+        "value": 12
+    },
+    {
+        "index": 3,
+        "weight": 7,
+        "value": 14
+    },
+    {
+        "index": 4,
+        "weight": 58,
+        "value": 16
+    },
+    {
+        "index": 5,
+        "weight": 72,
+        "value": 23
+    },
+    {
+        "index": 6,
+        "weight": 43,
+        "value": 27
+    },
+    {
+        "index": 7,
+        "weight": 26,
+        "value": 45
+    }
+]

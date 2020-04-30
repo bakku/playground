@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require 'json'
+require_relative './lib/knapsack'
+
+if ARGV.count != 2
+  puts 'usage:'
+  puts './knapsack <CAPACITY> <INPUT JSON FILE>'
+  exit 0
+end
+
+result = Knapsack.new(
+  ARGV[0].to_i,
+  JSON.parse(File.read(ARGV[1]))
+).run
+
+File.write('output.json', JSON.pretty_generate(result))
