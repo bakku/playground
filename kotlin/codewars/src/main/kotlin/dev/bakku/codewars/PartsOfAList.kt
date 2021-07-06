@@ -10,10 +10,11 @@ package dev.bakku.codewars
  *
  * Elements of a pair must be in the same order as in the original array.
  *
- * Example::
+ * Example:
  *
  * a = ["az", "toto", "picaro", "zone", "kiwi"] -->
- * [["az", "toto picaro zone kiwi"], ["az toto", "picaro zone kiwi"], ["az toto picaro", "zone kiwi"], ["az toto picaro zone", "kiwi"]]
+ * [["az", "toto picaro zone kiwi"], ["az toto", "picaro zone kiwi"],
+ *  ["az toto picaro", "zone kiwi"], ["az toto picaro zone", "kiwi"]]
  */
 fun partsOfAList(arr: Array<String>): Array<Array<String>> {
     return Array(arr.size - 1) { arr }
