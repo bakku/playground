@@ -1,0 +1,22 @@
+.wrapper {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+}
+
+.amogus-logo {
+    width: 400px;
+    height: auto;
+}
+
+button {
+  padding: 10px 14px 10px 14px;
+  align-items: baseline;
+  color: white;
+  background-color: #7b0838;
+  border-radius: 10%;
+  border-color: white;
+}
