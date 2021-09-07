@@ -1,0 +1,7 @@
+class Employee
+  attr_reader name: String
+
+  attr_reader age: Integer
+
+  def initialize: (String name, Integer age) -> void
+end

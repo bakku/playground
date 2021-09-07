@@ -1,0 +1,7 @@
+# frozen_string_literal: true
+
+class Company
+  attr_reader employees: Array[Employee]
+
+  def initialize: (Array[Employee] employees) -> void
+end
