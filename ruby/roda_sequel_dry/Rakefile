@@ -1,0 +1,24 @@
+# frozen_string_literal: true
+
+task :environment do
+  require "rubygems"
+  require "bundler/setup"
+
+  require_relative "./config"
+end
+
+task console: [:environment] do
+  require "irb"
+
+  Config.setup!
+
+  # will cause issues when starting
+  # IRB without the next line
+  ARGV.clear
+  IRB.start
+end
+task c: :console
+
+task migrate: [:environment] do
+  Config.apply_migrations
+end

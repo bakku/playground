@@ -1,0 +1,15 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+gem "dry-view"
+gem "erbse"
+gem "puma"
+gem "rack-test"
+gem "rake"
+gem "roda"
+gem "rspec"
+gem "sequel"
+gem "sqlite3"
+gem "tilt"
+gem "zeitwerk"
