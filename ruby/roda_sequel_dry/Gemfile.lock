@@ -18,7 +18,7 @@ GEM
     erbse (0.1.4)
       temple
     nio4r (2.5.8)
-    puma (5.4.0)
+    puma (5.5.1)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -47,6 +47,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   dry-view
