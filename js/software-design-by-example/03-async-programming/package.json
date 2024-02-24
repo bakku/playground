@@ -1,0 +1,17 @@
+{
+  "name": "03-async-programming",
+  "version": "1.0.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bakku/playground.git"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/node": "20.10.0"
+  },
+  "packageManager": "yarn@4.1.0",
+  "dependencies": {
+    "vite-node": "^1.3.1"
+  }
+}
