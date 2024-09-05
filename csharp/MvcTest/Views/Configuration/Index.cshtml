@@ -1,0 +1,37 @@
+@using Microsoft.Extensions.Options
+
+@model MvcTest.ViewModels.ConfigurationIndex
+@inject IOptionsSnapshot<SecretKeyOptions> secretKeyOptionsSnapshot
+
+@{
+    ViewData["Title"] = "Configuration";
+}
+
+<h1 class="display-4">Configuration</h1>
+
+<div class="mt-3">
+    <h3 class="lead">SecretKeyOptionsManually</h3>
+    <p>
+        <strong>GoogleApiKey:</strong> @Model.SecretKeyOptionsManually.GoogleApiKey <br />
+        <strong>PaypalSellerKey:</strong> @Model.SecretKeyOptionsManually.PaypalSellerKey <br />
+        <strong>SecretRandomNumber:</strong> @Model.SecretKeyOptionsManually.SecretRandomNumber <br />
+    </p>
+</div>
+
+<div class="mt-3">
+    <h3 class="lead">SecretKeyOptionsDI</h3>
+    <p>
+        <strong>GoogleApiKey:</strong> @Model.SecretKeyOptionsDi.Value.GoogleApiKey <br />
+        <strong>PaypalSellerKey:</strong> @Model.SecretKeyOptionsDi.Value.PaypalSellerKey <br />
+        <strong>SecretRandomNumber:</strong> @Model.SecretKeyOptionsDi.Value.SecretRandomNumber <br />
+    </p>
+</div>
+
+<div class="mt-3">
+    <h3 class="lead">SecretKeyOptionsSnapshot</h3>
+    <p>
+        <strong>GoogleApiKey:</strong> @secretKeyOptionsSnapshot.Value.GoogleApiKey <br />
+        <strong>PaypalSellerKey:</strong> @secretKeyOptionsSnapshot.Value.PaypalSellerKey <br />
+        <strong>SecretRandomNumber:</strong> @secretKeyOptionsSnapshot.Value.SecretRandomNumber <br />
+    </p>
+</div>
