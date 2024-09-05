@@ -1,0 +1,14 @@
+version: '3'
+volumes:
+  postgres:
+services:
+  db:
+    image: postgres:15.3-alpine
+    environment:
+      POSTGRES_USER: springsample
+      POSTGRES_PASSWORD: springsample
+      POSTGRES_DB: springsample
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'postgres:/var/lib/postgresql/data'
