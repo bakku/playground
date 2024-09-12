@@ -1,0 +1,17 @@
+@model MvcTest.ViewModels.ContextIndex
+
+@{
+    ViewData["Title"] = "Context";
+}
+
+<h1 class="display-4">HttpContext</h1>
+
+<div class="mt-3">
+    <h3 class="lead">Request Headers</h3>
+    <p>
+        @foreach(var pair in Model.Headers) {
+            <strong>@pair.Key:</strong> @pair.Value <br/>
+        }
+    </p>
+</div>
+
