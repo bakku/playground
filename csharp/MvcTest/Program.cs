@@ -1,9 +1,12 @@
 using MvcTest.Extensions;
+using MvcTest.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHealthChecks()
+    .AddCheck<InternetAvailableHealthCheck>("Internet Available");
 
 builder.Services
     .AddConfigOptions(builder.Configuration)
@@ -21,10 +24,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
-app.UseRouting();
-
 app.UseAuthorization();
 app.MapControllers();
+app.MapHealthChecks("/health");
 
 app.Run();
