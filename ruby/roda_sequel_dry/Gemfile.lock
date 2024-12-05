@@ -20,7 +20,7 @@ GEM
     nio4r (2.5.8)
     puma (5.4.0)
       nio4r (~> 2.0)
-    rack (2.2.3)
+    rack (2.2.6.4)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (13.0.6)
@@ -47,6 +47,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   dry-view
